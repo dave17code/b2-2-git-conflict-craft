@@ -1,6 +1,5 @@
-from string_utils import reverse_string
 from count_utils import count_words
 
-if __name__ == "__main__":
+if name == "main":
     print("=== Python Utils Demo ===")
     print("Kang Result:", count_words("Hello Python Git Collaboration"))
