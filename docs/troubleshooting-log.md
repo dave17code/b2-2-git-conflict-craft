@@ -63,15 +63,17 @@ git reset --soft HEAD~1
 실습용 파일 `docs/revert-practice.md`를 커밋하고 원격 저장소에 push한 뒤 해당 커밋을 `git revert`로 취소했다.
 
 ### 사용한 명령
+
 ```bash
-git revert <Joo의 실제 원본 커밋 해시> --no-edit
+git revert df3e50c --no-edit
 ```
 
 ### 결과
+
 기존 커밋은 Git 히스토리에 유지되고 기존 변경 사항을 반대로 적용하는 새로운 Revert 커밋이 생성되었다.
 
-- 원본 커밋: `<Joo의 실제 원본 커밋 해시>`
-- Revert 커밋: `<Joo의 실제 Revert 커밋 해시>`
+* 원본 커밋: `df3e50c`
+* Revert 커밋: `7a37beb`
 
 ### 왜 이 방법을 선택했는가(Why)
 이미 원격 저장소에 공유된 커밋이므로 reset으로 히스토리를 변경하지 않고 새로운 취소 커밋을 생성하는 `git revert`를 사용했다.
